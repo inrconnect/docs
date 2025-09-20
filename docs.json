@@ -54,13 +54,18 @@
     "global": {
       "anchors": [
         {
-          "anchor": "Documentation",
-          "href": "https://docs.inrconnect.com",
-          "icon": "book-open-cover"
+          "anchor": "Suggest a Feature",
+          "href": "https://inrconnect.featurebase.app",
+          "icon": "message-square-plus"
+        },
+        {
+          "anchor": "Roadmap",
+          "href": "https://inrconnect.featurebase.app/roadmap",
+          "icon": "map"
         },
         {
           "anchor": "Blog",
-          "href": "https://www.inrconnect.com",
+          "href": "https://www.inrconnect.com/blog",
           "icon": "newspaper"
         }
       ]
