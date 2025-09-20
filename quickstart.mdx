@@ -1,80 +1,94 @@
 ---
 title: "Quickstart"
-description: "Start building awesome documentation in minutes"
+description: "Connect Housecall Pro to Inrconnect and start syncing your data"
 ---
 
 ## Get started in three steps
 
-Get your documentation site running locally and make your first customization.
+Follow these steps to connect your Housecall Pro account and begin streaming real-time events into Inrconnect.
 
-### Step 1: Set up your local environment
+### Step 1: Open the App Store in Housecall Pro
 
 <AccordionGroup>
-  <Accordion icon="copy" title="Clone your docs locally">
-    During the onboarding process, you created a GitHub repository with your docs content if you didn't already have one. You can find a link to this repository in your [dashboard](https://dashboard.mintlify.com).
-    
-    To clone the repository locally so that you can make and preview changes to your docs, follow the [Cloning a repository](https://docs.github.com/en/repositories/creating-and-managing-repositories/cloning-a-repository) guide in the GitHub docs.
-  </Accordion>
-  <Accordion icon="rectangle-terminal" title="Start the preview server">
-    1. Install the Mintlify CLI: `npm i -g mint`
-    2. Navigate to your docs directory and run: `mint dev`
-    3. Open `http://localhost:3000` to see your docs live!
-    
-    <Tip>Your preview updates automatically as you edit files.</Tip>
+  <Accordion icon="apps" title="Go to the App Store">
+    1. Log in to your Housecall Pro account.  
+    2. In the top navigation bar, click the **grid icon** (next to your profile).  
+    3. Select **Go to App store** from the dropdown.  
+
+    <Tip>You’ll see all available apps and integrations inside Housecall Pro.</Tip>
+    ![](/images/quickstart/hcp/hcp-how-to-connect-webhooks-step-1.png)
   </Accordion>
 </AccordionGroup>
 
-### Step 2: Deploy your changes
+### Step 2: Enable the Webhooks App
 
 <AccordionGroup>
-  <Accordion icon="github" title="Install our GitHub app">
-    Install the Mintlify GitHub app from your [dashboard](https://dashboard.mintlify.com/settings/organization/github-app).
-    
-    Our GitHub app automatically deploys your changes to your docs site, so you don't need to manage deployments yourself.
-</Accordion>
-<Accordion icon="palette" title="Update your site name and colors">
-    For a first change, let's update the name and colors of your docs site.
+  <Accordion icon="plug" title="Search and activate Webhooks">
+    1. In the App Store, use the search bar to look for **Webhooks**.  
+    2. Select the **Webhooks** app (built by HCP).  
+    3. Toggle the app to **Active**.  
 
-    1. Open `docs.json` in your editor.
-    2. Change the `"name"` field to your project name.
-    3. Update the `"colors"` to match your brand.
-    4. Save and see your changes instantly at `http://localhost:3000`.
-
-    <Tip>Try changing the primary color to see an immediate difference!</Tip>
+    ![](/images/hcp-how-to-connect-webhooks-step-2.png)
   </Accordion>
 </AccordionGroup>
 
-### Step 3: Go live
+### Step 3: Configure your webhook URL and secret
 
-<Accordion icon="rocket" title="Publish your docs">
-  1. Commit and push your changes.
-  2. Your docs will update and be live in moments!
-</Accordion>
+<AccordionGroup>
+  <Accordion icon="link" title="Add your Inrconnect webhook URL">
+    1. Copy your unique Inrconnect webhook URL from the dashboard.  
+       Example: `https://events.inrconnect.cloud/your-unique-id`  
+    2. Paste it into the **Webhook URL** field in Housecall Pro.  
+    3. Copy the **Signing Secret** provided—this will be needed inside Inrconnect to verify requests.  
+    4. Click **Save**.  
+
+    ![](/images/quickstart/hcp/hcp-how-to-connect-webhooks-setp-3.png)
+  </Accordion>
+</AccordionGroup>
+
+### Step 4: Select which events to receive
+
+<AccordionGroup>
+  <Accordion icon="list-check" title="Enable webhook events">
+    1. Scroll down to the **Enable Webhook Events** section.  
+    2. Turn on the events you want to stream into Inrconnect, such as:  
+       - `customer.created`, `customer.updated`, `customer.deleted`  
+       - `estimate.created`, `estimate.updated`, `estimate.sent`  
+       - `job.created`, `job.scheduled`, `job.completed`, `job.paid`  
+       - `lead.created`, `lead.converted`, `lead.updated`  
+    3. Once you’ve selected your events, click **Save**.  
+
+    ![](/images/quickstart/hcp/hcp-how-to-connect-webhooks-step4.1.png)  
+    ![](/images/quickstart/hcp/hcp-how-to-connect-webhooks-step-4.2.png)
+  </Accordion>
+</AccordionGroup>
+
+---
 
 ## Next steps
 
-Now that you have your docs running, explore these key features:
+Once webhooks are connected:
 
 <CardGroup cols={2}>
 
-<Card title="Write Content" icon="pen-to-square" href="/essentials/markdown">
-  Learn MDX syntax and start writing your documentation.
+<Card title="View synced data" icon="chart-simple" href="/dashboards">
+  See jobs, estimates, and invoices flowing into your Inrconnect dashboards.
 </Card>
 
-<Card title="Customize style" icon="palette" href="/essentials/settings">
-  Make your docs match your brand perfectly.
+<Card title="Configure reports" icon="file-lines" href="/reports">
+  Build custom reports using the synced webhook data.
 </Card>
 
-<Card title="Add code examples" icon="square-code" href="/essentials/code">
-  Include syntax-highlighted code blocks.
+<Card title="Invite your team" icon="users" href="/organizations">
+  Share access with your team and assign roles for collaboration.
 </Card>
 
-<Card title="API documentation" icon="code" href="/api-reference/introduction">
-  Auto-generate API docs from OpenAPI specs.
+<Card title="Explore API" icon="terminal" href="/api-reference/introduction">
+  Use the Inrconnect API to extend and automate your reporting workflows.
 </Card>
 
 </CardGroup>
 
 <Note>
-  **Need help?** See our [full documentation](https://mintlify.com/docs) or join our [community](https://mintlify.com/community).
+  **Tip:** You can return to the Housecall Pro webhook settings at any time to add or remove events.
 </Note>
