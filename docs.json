@@ -19,6 +19,14 @@
               "index",
               "quickstart"
             ]
+          },
+          {
+            "group": "AI tools",
+            "pages": [
+              "ai-tools/cursor",
+              "ai-tools/claude-code",
+              "ai-tools/windsurf"
+            ]
           }
         ]
       },
@@ -81,7 +89,10 @@
      "view",
      "chatgpt",
      "claude",
-     "perplexity"
+     "perplexity",
+     "mcp",
+     "cursor",
+     "vscode"
    ]
   },
   "footer": {
