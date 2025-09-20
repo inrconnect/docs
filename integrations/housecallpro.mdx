@@ -1,0 +1,94 @@
+---
+title: "Connect Housecall Pro"
+description: "Connect Housecall Pro to Inrconnect and start syncing your data"
+---
+
+## Get started in three steps
+
+Follow these steps to connect your Housecall Pro account and begin streaming real-time events into Inrconnect.
+
+### Step 1: Open the App Store in Housecall Pro
+
+<AccordionGroup>
+  <Accordion icon="apps" title="Go to the App Store">
+    1. Log in to your Housecall Pro account.  
+    2. In the top navigation bar, click the **grid icon** (next to your profile).  
+    3. Select **Go to App store** from the dropdown.  
+
+    <Tip>You’ll see all available apps and integrations inside Housecall Pro.</Tip>
+    ![](/images/quickstart/hcp/hcp-how-to-connect-webhooks-step-1.png)
+  </Accordion>
+</AccordionGroup>
+
+### Step 2: Enable the Webhooks App
+
+<AccordionGroup>
+  <Accordion icon="plug" title="Search and activate Webhooks">
+    1. In the App Store, use the search bar to look for **Webhooks**.  
+    2. Select the **Webhooks** app (built by HCP).  
+    3. Toggle the app to **Active**.  
+
+    ![](/images/quickstart/hcp/hcp-how-to-connect-webhooks-step-2.png)
+  </Accordion>
+</AccordionGroup>
+
+### Step 3: Configure your webhook URL and secret
+
+<AccordionGroup>
+  <Accordion icon="link" title="Add your Inrconnect webhook URL">
+    1. Copy your unique Inrconnect webhook URL from the dashboard.  
+       Example: `https://events.inrconnect.cloud/your-unique-id`  
+    2. Paste it into the **Webhook URL** field in Housecall Pro.  
+    3. Copy the **Signing Secret** provided—this will be needed inside Inrconnect to verify requests.  
+    4. Click **Save**.  
+
+    ![](/images/quickstart/hcp/hcp-how-to-connect-webhooks-setp-3.png)
+  </Accordion>
+</AccordionGroup>
+
+### Step 4: Select which events to receive
+
+<AccordionGroup>
+  <Accordion icon="list-check" title="Enable webhook events">
+    1. Scroll down to the **Enable Webhook Events** section.  
+    2. Turn on the events you want to stream into Inrconnect, such as:  
+       - `customer.created`, `customer.updated`, `customer.deleted`  
+       - `estimate.created`, `estimate.updated`, `estimate.sent`  
+       - `job.created`, `job.scheduled`, `job.completed`, `job.paid`  
+       - `lead.created`, `lead.converted`, `lead.updated`  
+    3. Once you’ve selected your events, click **Save**.  
+
+    ![](/images/quickstart/hcp/hcp-how-to-connect-webhooks-step4.1.png)  
+    ![](/images/quickstart/hcp/hcp-how-to-connect-webhooks-step-4.2.png)
+  </Accordion>
+</AccordionGroup>
+
+---
+
+## Next steps
+
+Once webhooks are connected:
+
+<CardGroup cols={2}>
+
+<Card title="View synced data" icon="chart-simple" href="/dashboards">
+  See jobs, estimates, and invoices flowing into your Inrconnect dashboards.
+</Card>
+
+<Card title="Configure reports" icon="file-lines" href="/reports">
+  Build custom reports using the synced webhook data.
+</Card>
+
+<Card title="Invite your team" icon="users" href="/organizations">
+  Share access with your team and assign roles for collaboration.
+</Card>
+
+<Card title="Explore API" icon="terminal" href="/api-reference/introduction">
+  Use the Inrconnect API to extend and automate your reporting workflows.
+</Card>
+
+</CardGroup>
+
+<Note>
+  **Tip:** You can return to the Housecall Pro webhook settings at any time to add or remove events.
+</Note>
